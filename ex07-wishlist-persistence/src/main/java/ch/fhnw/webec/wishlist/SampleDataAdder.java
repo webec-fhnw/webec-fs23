@@ -64,8 +64,8 @@ public class SampleDataAdder implements CommandLineRunner {
                 }
             }
 
-            wishlists.forEach(wishlistService::save);
             categories.forEach(categoryService::save);
+            wishlists.forEach(wishlistService::save);
         }
     }
 }

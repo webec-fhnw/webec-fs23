@@ -1,17 +1,26 @@
 package ch.fhnw.webec.wishlist.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Comparator.comparing;
+import static javax.persistence.CascadeType.ALL;
 
+@Entity
 public class Wishlist {
 
+    @Id
+    @GeneratedValue
     private Integer id;
     private String name;
     private LocalDate createdDate;
-    private List<Wish> entries = new ArrayList<>();
+    @OneToMany(cascade = ALL)
+    private final List<Wish> entries = new ArrayList<>();
 
     protected Wishlist() {} // for JSON deserialization (and later JPA)
 
