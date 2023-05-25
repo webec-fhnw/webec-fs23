@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Length Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <h1>Length Converter</h1>
+    <form method="get" action="/convert">
+        <table>
+            <tr>
+                <td><label for="feet">Feet</label></td>
+                <td><input type="number" id="feet" name="feet" value="0" required></td>
+            </tr>
+            <tr>
+                <td><label for="inches">Inches</label></td>
+                <td><input type="number" id="inches" name="inches" value="0" required></td>
+            </tr>
+        </table>
+        <p>
+            <input type="button" id="convert" value="Convert">
+        </p>
+        <p id="result" class="hidden"></p>
+    </form>
+</main>
+</body>
+</html>
